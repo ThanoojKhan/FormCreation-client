@@ -4,9 +4,7 @@ import SimpleLogin from '../components/SimpleLogin'
 function Login() {
     return (
         <>
-            
             <SimpleLogin />
-
         </>
     )
 }

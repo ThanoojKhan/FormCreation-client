@@ -1,0 +1,29 @@
+.nav-container {
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+.nav-container ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-container li {
+    margin-right: 10px;
+}
+
+.nav-container a {
+    text-decoration: none;
+    color: #007bff;
+    padding: 8px 12px;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.nav-container a:hover {
+    background-color: #007bff;
+    color: #fff;
+}
