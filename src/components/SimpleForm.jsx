@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './SimpleForm.css';
+import { Link, useNavigate } from 'react-router-dom';
 
 const SimpleForm = () => {
     const [formData, setFormData] = useState({
@@ -14,6 +15,7 @@ const SimpleForm = () => {
 
     const [serverResponse, setServerResponse] = useState(null);
     const [errors, setErrors] = useState({});
+    const navigate = useNavigate();
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -46,10 +48,11 @@ const SimpleForm = () => {
         if (Object.keys(validationErrors).length === 0) {
             try {
                 const response = await axios.post('http://localhost:4000/submit', formData);
+                console.log(response);
                 setServerResponse(response.data);
-                alert('Form submitted successfully');
+                navigate('/login');
             } catch (error) {
-                console.error('Error submitting form', error);
+                console.error('Error submitting form:', error);
                 alert('Error submitting form');
             }
         } else {
@@ -91,6 +94,7 @@ const SimpleForm = () => {
                     {errors.confirmPassword && <span>{errors.confirmPassword}</span>}
                 </div>
                 <button type="submit">Submit</button>
+                <p>Alreay a user <Link to="/login">Login</Link></p>
             </form>
             {serverResponse && (
                 <div className="server-response">
