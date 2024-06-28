@@ -7,6 +7,8 @@ import GetMethod from './components/GetMethod';
 import PatchMethod from './components/PatchMethod';
 import PutMethod from './components/PutMethod';
 import DeleteMethod from './components/DeleteMethod';
+import CreateTicket from './components/CreateTicket';
+import ListTicket from './components/ListTicket';
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
         <Route path="/patch" element={<PatchMethod />} />
         <Route path="/put" element={<PutMethod />} />
         <Route path="/delete" element={<DeleteMethod />} />
+        <Route path="/createTicket" element={<CreateTicket />} />
+        <Route path="/showTicket" element={<ListTicket />} />
       </Routes>
     </Router>
   );

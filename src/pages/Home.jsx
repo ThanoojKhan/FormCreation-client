@@ -18,6 +18,9 @@ function NavLinks() {
                     <li>
                         <Link to="/delete">DELETE Method</Link>
                     </li>
+                    <li>
+                        <Link to="/createTicket">Ticket creation</Link>
+                    </li>
                 </ul>
             </nav>
         </div>
